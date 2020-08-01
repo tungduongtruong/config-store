@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
+  routes:
+    uaa-service:
+        path: /uaa-service/**
+        serviceId: uaa-service
+        stripPrefix: true
+    profile-service:
+        path: /profile-service/**
+        serviceId: profile-service
+        stripPrefix: true
+    project-service:
+        path: /project-service/**
+        serviceId: project-service
+        stripPrefix: true
+    image-service:
+        path: /image-service/**
+        serviceId: image-service
+        stripPrefix: true    

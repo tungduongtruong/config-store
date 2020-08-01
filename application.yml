@@ -1,0 +1,23 @@
+---
+spring.mvc.favicon.enabled: false
+spring.jackson.serialization.fail-on-empty-beans: false
+spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: true
+spring.jackson.serialization.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: true
+
+---
+logging:
+  level:
+    org.springframework.cloud: INFO, ERR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+---
+locale:
+  language: vi
+  country: VN
+  tag: vi-VN
+  
+---
+timezone:
+  id: Asia/Ho_Chi_Minh
