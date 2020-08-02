@@ -1,0 +1,7 @@
+server:
+  port: 9003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://guest:135246@127.0.0.1:8761/eureka
