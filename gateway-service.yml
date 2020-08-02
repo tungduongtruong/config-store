@@ -8,6 +8,7 @@ eureka:
 
 zuul:
   ignoredServices: '*'
+  sensitive-headers: Cookie,Set-Cookie
   host:
     connect-timeout-millis: 30000
     socket-timeout-millis: 30000
