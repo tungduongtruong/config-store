@@ -10,7 +10,7 @@ spring:
   datasource:
     username: 'guest'
     password: 's3cr3t'
-    url: jdbc:mysql://127.0.0.1:3306/uaadb
+    url: jdbc:mysql://127.0.0.1:3306/uaadb?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useUnicode=yes&characterEncoding=utf8
   jpa:
     database: MYSQL
     generate-ddl: true
