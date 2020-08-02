@@ -1,5 +1,13 @@
 server:
   port: 8761
+
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: "guest"
+      password: "s3cr3t"
    
 eureka:
   client:
