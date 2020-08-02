@@ -12,7 +12,7 @@ spring:
     password: 's3cr3t'
     url: jdbc:mysql://127.0.0.1:3306/uaadb
   jpa:
-    database: myslq
+    database: MYSQL
     generate-ddl: true
     hibernate.ddl-auto: update
     show-sql: true 
