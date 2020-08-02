@@ -45,6 +45,8 @@ security:
       accessTokenUri: http://localhost:9999/oauth/token
       userAuthorizationUri: http://localhost:9999/oauth/authorize
       clientAuthenticationScheme: form
+      clientId: USER_CLIENT_APP
+      clientSecret: password
     resource:
       userInfoUri: http://localhost:9999/user
       preferTokenInfo: false
