@@ -16,15 +16,40 @@ zuul:
         path: /uaa-service/**
         serviceId: uaa-service
         stripPrefix: true
-    profile-service:
-        path: /profile-service/**
-        serviceId: profile-service
+    product-service:
+        path: /product-service/**
+        serviceId: product-service
         stripPrefix: true
-    project-service:
-        path: /project-service/**
-        serviceId: project-service
+    inventory-service:
+        path: /inventory-service/**
+        serviceId: inventory-service
+        stripPrefix: true
+    order-service:
+        path: /order-service/**
+        serviceId: order-service
         stripPrefix: true
     image-service:
         path: /image-service/**
         serviceId: image-service
-        stripPrefix: true    
+        stripPrefix: true   
+
+security:
+  user:
+    name: root
+    password: password
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/oauth/token
+      userAuthorizationUri: http://localhost:9999/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: http://localhost:9999/user
+      preferTokenInfo: false
+  sessions: ALWAYS
+
+proxy:
+  auth:
+    routes:
+      product-service: oauth2
+      inventory-service: oauth2
+      order-service: oauth2          
